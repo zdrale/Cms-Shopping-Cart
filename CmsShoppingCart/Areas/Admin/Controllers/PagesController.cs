@@ -174,7 +174,7 @@ namespace CmsShoppingCart.Areas.Admin.Controllers
             
             return RedirectToAction("EditPage");
         }
-        //GET:Admin/Pages/EditPage/id
+        //GET:Admin/Pages/PageDetails/id
         public ActionResult PageDetails(int id)
         {
             //Declare PageVM
@@ -201,7 +201,7 @@ namespace CmsShoppingCart.Areas.Admin.Controllers
 
         }
 
-        //GET:Admin/Pages/EditPage/id
+        //GET:Admin/Pages/DeletePage/id
         public ActionResult DeletePage(int id)
         {
             using (Db db = new Db())
@@ -221,7 +221,7 @@ namespace CmsShoppingCart.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
-        //GET:Admin/Pages/ReorderPages
+        //POST:Admin/Pages/ReorderPages
         [HttpPost]
         public void ReorderPages(int[] id )
         {
